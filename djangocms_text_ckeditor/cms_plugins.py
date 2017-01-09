@@ -35,7 +35,7 @@ from .widgets import TextEditorWidget
 class TextPlugin(CMSPluginBase):
     model = Text
     name = settings.TEXT_PLUGIN_NAME
-    module = settings.TEXT_PLUGIN_MODULE_NAME
+    module = "Basis"
     form = TextForm
     render_template = "cms/plugins/text.html"
     change_form_template = "cms/plugins/text_plugin_change_form.html"

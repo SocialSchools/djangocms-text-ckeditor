@@ -1,6 +1,68 @@
 CHANGELOG
 =========
 
+3.3.1 (2016-11-02)
+------------------
+
+* Fixed an issue with maximized CKEditor inside of maximized CMS modal in FF
+* Fixed path to the icon in the context menu
+* Fixed JavaScript error happening when certain fields wouldn't exist in child
+  plugin
+* Fixed an issue with CKEditor dialogs going outside of the ckeditor area, which
+  was making them unusable
+* Fixed an issue when only the first selected text would be populated to the
+  title field in supported child plugins
+
+
+3.3.0 (2016-10-04)
+------------------
+
+* Fixed a problem with editing links that are not CMS plugins
+* Fixed a problem with prefilling fields when editing CMS plugins
+* Fixed a bug with extra whitespace appearing around plugin rendered inside of
+  the text plugin
+* Updated CKEditor to 4.5.11
+* Fixed JavaScript error thrown when multiple instances of TextField are used on
+  the page
+* Fixed CKEditor not initializing inside of the ``inline``.
+
+
+3.2.1 (2016-09-14)
+------------------
+
+* Changed the way ckeditor js is loaded, everything is now loaded in one bundle
+* Changed the way ckeditor loads must-have external plugins, so user config
+  would have no effect on the settings
+* Fixed error which prevented plugins extending TextPlugin to work
+* Fixed a regression where CKEditor would create unnecessary ``<p>`` tags around
+  CMS plugins
+* Fixed a bug when child plugin cannot be edited while text plugin is not
+  completely created
+* Fixed a bug where plugins rendered via the real-preview would not trigger
+  the context processors.
+
+
+3.2.0 (2016-09-07)
+------------------
+
+* Introduced support for djangoCMS 3.4.0
+* Fixed a JavaScript issue when using TextEditorWidget or HTMLField
+* Added native Aldryn support
+* Fixed a bug where invalid markup created by previous versions of the plugin
+  would result in a broken markup after upgrading
+* Fixed a bug where whitespace would be incorrectly removed before the child
+  plugin on save of the text plugin
+
+
+3.1.0 (2016-08-18)
+------------------
+
+* Added support for inline preview of text enabled CMS plugins
+* Added support for plugins to declare "text_editor_preview=False" in order for
+  them to be rendered with old-style label (useful for plugins with no valuable
+  visual representation, such as snippet, spacer, etc).
+
+
 3.0.1 (2016-07-15)
 ------------------
 

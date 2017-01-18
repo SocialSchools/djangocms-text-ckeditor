@@ -9,7 +9,8 @@ The latest version of this package supports:
 * django CMS >= 3.3
 
 .. WARNING::
-   - For django CMS 3.3.x use ``djangocms-text-ckeditor`` >= 3.0.x (e.g.: version 3.0.0).
+   - For django CMS 3.4.x use ``djangocms-text-ckeditor`` >= 3.2.x (e.g.: version 3.2.1).
+   - For django CMS 3.3.x use ``djangocms-text-ckeditor`` >= 3.1.x (e.g.: version 3.1.0).
    - For django CMS 3.2.x use ``djangocms-text-ckeditor`` <= 2.9.x (e.g.: version 2.9.3).
    - For django CMS 3.0 and 3.1 use ``djangocms-text-ckeditor`` <= 2.7 (e.g.: version 2.7.0).
    - For django CMS 2.3 and 2.4 use the ``djangocms-text-ckeditor`` 1.x releases (e.g.: version 1.0.10).
@@ -364,4 +365,20 @@ djangocms-text-ckeditor works well with `aldryn-search <https://github.com/aldry
 About CKEditor
 --------------
 
-The current integrated Version of CKeditor is **4.5.4**. For a full documentation visit: http://ckeditor.com/
+The current integrated Version of CKeditor is **4.5.11**. For a full documentation visit: http://ckeditor.com/
+
+Building the JavaScript
+-----------------------
+
+``djangocms-text-ckeditor`` distributes a javascript bundle required for the
+plugin to work, which contains CKEditor itself and all the necessary plugins for
+functioning within CMS. To build the bundle you need to have to install
+dependencies with ``npm install`` and then to run ``gulp bundle``.
+
+This command also updates the file name loaded based on the file contents.
+
+Updating the CKEditor
+---------------------
+
+Make sure to use the url in `build config
+<https://github.com/divio/djangocms-text-ckeditor/blob/master/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/build-config.js#L16>_`.
